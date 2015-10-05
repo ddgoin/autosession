@@ -17,3 +17,5 @@ endfunction
 
 autocmd VimLeave * call SaveSess()
 autocmd VimEnter * nested if !argc() | call RestoreSess() | endif
+
+set sessionoptions-=options  " Don't save options (reload from vimrc)
